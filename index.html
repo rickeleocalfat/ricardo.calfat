@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0014" />
+  <title>🥔 BATATA CÓSMICA SUPREMA 🥔 — O Site Mais Absurdo do Multiverso</title>
+  <meta name="description" content="A experiência 3D mais absurda já criada. Adore a Batata Cósmica Suprema, imperatriz interdimensional do rave galáctico." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Bungee&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Three.js vendorizado localmente (sem CDN). Precisa ser servido por http, ver README. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== TELA DE CARREGAMENTO ===== -->
+  <div id="loader">
+    <div class="loader-spud">🥔</div>
+    <div class="loader-text">CARREGANDO ABSURDO...</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <div class="loader-hint">se isto travar, leia o README e rode um servidor local 🛰️</div>
+  </div>
+
+  <!-- ===== CANVAS 3D ===== -->
+  <canvas id="webgl"></canvas>
+
+  <!-- ===== INTERFACE ABSURDA ===== -->
+  <div id="ui">
+
+    <!-- topo -->
+    <header class="top">
+      <h1 class="glitch" data-text="BATATA CÓSMICA SUPREMA">BATATA CÓSMICA SUPREMA</h1>
+      <p class="subtitle">imperatriz interdimensional do rave galáctico 🛸 desde antes do tempo existir</p>
+    </header>
+
+    <!-- medidor de absurdo -->
+    <div class="absurd-meter">
+      <span class="absurd-label">NÍVEL DE ABSURDO</span>
+      <div class="absurd-track"><div id="absurdFill" class="absurd-fill"></div></div>
+      <span id="absurdValue" class="absurd-value">0%</span>
+    </div>
+
+    <!-- selos de canto -->
+    <div class="badge badge-tl">⚠ 100% sem sentido</div>
+    <div class="badge badge-tr">aprovado por 7 dimensões</div>
+    <div class="badge badge-bl" id="fpsBadge">∞ fps</div>
+    <div class="badge badge-br">não contém glúten cósmico</div>
+
+    <!-- frase aleatória -->
+    <div id="phrase" class="phrase">arraste a tela. a batata observa.</div>
+
+    <!-- botões de controle -->
+    <nav class="controls">
+      <button class="btn" data-action="rave">🔊 MODO RAVE</button>
+      <button class="btn" data-action="spawn">🥔 INVOCAR BATATAS</button>
+      <button class="btn" data-action="pizza">🍕 CHUVA DE PIZZA</button>
+      <button class="btn" data-action="dimension">🌀 TROCAR DIMENSÃO</button>
+      <button class="btn" data-action="shake">💥 TREMER REALIDADE</button>
+      <button class="btn" data-action="chaos">☢ CAOS TOTAL</button>
+    </nav>
+
+    <footer class="bottom-hint">
+      dica: digite o <b>código Konami</b> (↑↑↓↓←→←→ B A) para o <b>MODO ULTRA</b> · feito com 🥔 e zero responsabilidade
+    </footer>
+  </div>
+
+  <!-- camada de rastro do cursor -->
+  <div id="trail"></div>
+
+  <script type="module" src="./js/main.js"></script>
+
+  <!-- aviso caso os módulos não carreguem (sem internet / sem servidor http) -->
+  <script>
+    window.setTimeout(function () {
+      var loader = document.getElementById('loader');
+      if (loader && !loader.classList.contains('hidden') && !window.__BATATA_OK__) {
+        loader.querySelector('.loader-text').textContent = 'A BATATA ESTÁ PRESA NO LIMBO 😵';
+        loader.querySelector('.loader-hint').innerHTML =
+          'os módulos 3D não carregaram.<br>rode <b>python3 -m http.server</b> nesta pasta e abra <b>http://localhost:8000</b> (precisa de internet p/ o CDN).';
+      }
+    }, 9000);
+  </script>
+</body>
+</html>
