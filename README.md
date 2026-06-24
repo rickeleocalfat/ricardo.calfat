@@ -66,16 +66,19 @@ npx serve .
 
 2. **Textos e produtos** — todo o conteúdo está em `index.html`, em português e fácil de editar.
 
-3. **Imagens reais** — o layout usa arte vetorial (SVG) para nunca quebrar. Para deixar ainda
-   mais apetitoso, é possível trocar os blocos visuais do `hero` e do `feature` por fotos
-   profissionais dos produtos (recomendado para a versão final).
+3. **Imagens reais** — as fotos em `assets/` (hero, galeria, destaque e logotipo) foram
+   extraídas do **catálogo oficial Toscana 2023**. Para trocar qualquer uma, basta substituir
+   o arquivo correspondente em `assets/` mantendo o mesmo nome.
 
-4. **Cores** — ajuste as variáveis no início de `css/styles.css` (`--gold`, `--bg`, etc.).
+4. **Preços** — os valores exibidos (ex.: azeite trufado) vêm do catálogo 2023 e devem ser
+   revisados/atualizados conforme a tabela vigente antes de publicar.
+
+5. **Cores** — ajuste as variáveis no início de `css/styles.css` (`--gold`, `--terra`, `--green`, etc.).
 
 ## 📊 Próximos passos sugeridos (para vender ainda mais)
 
 - Conectar o formulário também a um e-mail/CRM (ex.: Formspree, RD Station) além do WhatsApp.
-- Adicionar **fotos profissionais** dos produtos e da equipe.
+- Adicionar **mais fotos** (equipe, loja/ambiente) e atualizar a galeria conforme novos lançamentos.
 - Instalar **Google Analytics / Meta Pixel** para medir e remarketing.
 - Criar páginas de produto/categoria para ranquear em mais buscas no Google.
 - Ativar **Google Meu Negócio** e linkar avaliações reais de clientes.
