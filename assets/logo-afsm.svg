@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LOGO PROVISÓRIO (placeholder tipográfico) — Afonso Silva e Muratori Advogados
+
+  TODO: substituir pelo logo definitivo do escritório.
+  O logo usado no site antigo pode ser baixado em:
+  https://cdn.b12.io/client_media/yl7MbBFx/11a69c04-5c0f-11ef-a227-0242ac110002-jpg-regular_image.jpeg
+  Salve o arquivo nesta pasta (ex.: assets/logo-afsm.jpg) e siga as instruções
+  do README.md para trocá-lo no cabeçalho do index.html.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="140" viewBox="0 0 440 140" role="img" aria-labelledby="titulo-logo">
+  <title id="titulo-logo">Afonso Silva e Muratori Advogados — AFSM</title>
+  <rect width="440" height="140" fill="none"/>
+  <text x="220" y="64" text-anchor="middle"
+        font-family="Lora, Georgia, 'Times New Roman', serif"
+        font-size="56" font-weight="500" letter-spacing="14" fill="#0E1C2B">AFSM</text>
+  <rect x="140" y="86" width="160" height="1.5" fill="#B08D57"/>
+  <text x="220" y="114" text-anchor="middle"
+        font-family="Inter, Arial, 'Helvetica Neue', sans-serif"
+        font-size="13" letter-spacing="4" fill="#8C6A38">AFONSO SILVA E MURATORI &#8212; ADVOGADOS</text>
+</svg>
