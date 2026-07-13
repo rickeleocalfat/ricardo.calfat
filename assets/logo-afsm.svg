@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: substituir — logo placeholder gerado em SVG.
+     O logo original está no site antigo (B12). Baixe-o e salve neste mesmo
+     caminho (assets/logo-afsm.svg ou .png, ajustando o src no index.html):
+     https://cdn.b12.io/client_media/yl7MbBFx/11a69c04-5c0f-11ef-a227-0242ac110002-jpg-regular_image.jpeg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="64" viewBox="0 0 300 64" role="img" aria-label="Afonso Silva e Muratori Advogados">
+  <text x="0" y="30" font-family="Lora, Georgia, 'Times New Roman', serif" font-size="26" fill="#F6F4EF" textLength="284" lengthAdjust="spacingAndGlyphs">Afonso Silva e Muratori</text>
+  <rect x="1" y="42" width="283" height="1" fill="#B08D57"/>
+  <text x="1" y="59" font-family="Lora, Georgia, 'Times New Roman', serif" font-size="12" fill="#B08D57" textLength="150" lengthAdjust="spacing" letter-spacing="6">ADVOGADOS</text>
+</svg>
