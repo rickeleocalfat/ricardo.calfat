@@ -1,0 +1,9 @@
+<!-- PLACEHOLDER do logo AFSM.
+     TODO: substituir pelo logo oficial do escritório.
+     Original (baixar e salvar aqui como logo-afsm.jpg):
+     https://cdn.b12.io/client_media/yl7MbBFx/11a69c04-5c0f-11ef-a227-0242ac110002-jpg-regular_image.jpeg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 88" role="img" aria-label="AFSM — Afonso Silva e Muratori Advogados">
+  <text x="0" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="44" letter-spacing="4" fill="#F5F3EE">AFSM</text>
+  <rect x="2" y="60" width="152" height="1" fill="#C6A15B"/>
+  <text x="2" y="78" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="3.2" fill="#C9CDD4">AFONSO SILVA E MURATORI · ADVOGADOS</text>
+</svg>
