@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       SEO — edite título e descrição aqui, se necessário
+       ============================================================ -->
+  <title>Afonso Silva e Muratori Advogados — Direito Tributário, Civil e Empresarial | São Paulo</title>
+  <meta name="description" content="Sociedade de advogados com atendimento individualizado e personalizado nas áreas de Direito Tributário, Civil e Empresarial. Escritório-boutique em São Paulo/SP.">
+
+  <!-- Open Graph (compartilhamento em redes sociais)
+       TODO: substituir SEU-DOMINIO.com.br pelo domínio final do site -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Afonso Silva e Muratori Advogados — Direito Tributário, Civil e Empresarial">
+  <meta property="og:description" content="Sociedade de advogados com atendimento individualizado e personalizado nas áreas de Direito Tributário, Civil e Empresarial.">
+  <meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Fontes: Lora (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:   '#0E1C2B',  /* azul-marinho profundo (cor principal) */
+            cream:  '#F6F4EF',  /* off-white quente (fundos claros) */
+            ink:    '#1A1A1A',  /* cinza-carvão (texto) */
+            bronze: '#B08D57',  /* dourado/bronze fosco (detalhes) */
+            'bronze-dark': '#7D5F36' /* bronze escurecido p/ texto em fundo claro (contraste AA) */
+          },
+          fontFamily: {
+            serif: ['Lora', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-padding-top: 6rem; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Foco visível para navegação por teclado */
+    a:focus-visible, button:focus-visible, input:focus-visible,
+    textarea:focus-visible, [tabindex]:focus-visible {
+      outline: 2px solid #B08D57;
+      outline-offset: 3px;
+    }
+
+    /* Painéis de accordion com transição suave */
+    .accordion-panel {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+
+    /* Animação sutil de entrada das seções */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .accordion-panel { transition: none; }
+    }
+  </style>
+
+  <!-- Dados estruturados (JSON-LD) para mecanismos de busca.
+       TODO: confirmar horário de atendimento e substituir SEU-DOMINIO.com.br pelo domínio final -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Afonso Silva e Muratori Advogados",
+    "alternateName": "AFSM",
+    "description": "Sociedade de advogados com atendimento individualizado e personalizado nas áreas de Direito Tributário, Civil e Empresarial.",
+    "url": "https://SEU-DOMINIO.com.br/",
+    "image": "https://SEU-DOMINIO.com.br/assets/og-image.png",
+    "telephone": "+55-11-2124-3763",
+    "email": "muratori@afsm.adv.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Presidente Juscelino Kubitschek, 1455, 4º andar — Itaim Bibi",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "04543-011",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/afonso-silva-e-muratori-advogados-associados/"
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-cream text-ink antialiased">
+
+  <!-- Link de acesso rápido para leitores de tela / teclado -->
+  <a href="#inicio" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-2 focus:left-2 focus:bg-navy focus:text-white focus:px-4 focus:py-2 focus:rounded">
+    Ir para o conteúdo principal
+  </a>
+
+  <!-- ============================================================
+       HEADER / NAVEGAÇÃO
+       ============================================================ -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-transparent">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 lg:px-8" aria-label="Navegação principal">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Afonso Silva e Muratori Advogados — Início">
+        <!-- TODO: substituir — logo placeholder; salve o logo definitivo em assets/ e ajuste o src -->
+        <img src="assets/logo-afsm.svg" alt="Afonso Silva e Muratori Advogados" class="h-9 w-auto sm:h-10">
+      </a>
+
+      <!-- Menu desktop -->
+      <ul class="hidden items-center gap-8 md:flex">
+        <li><a href="#inicio" class="nav-link text-sm text-white/80 transition hover:text-bronze" data-section="inicio">Início</a></li>
+        <li><a href="#escritorio" class="nav-link text-sm text-white/80 transition hover:text-bronze" data-section="escritorio">O Escritório</a></li>
+        <li><a href="#areas" class="nav-link text-sm text-white/80 transition hover:text-bronze" data-section="areas">Áreas de Atuação</a></li>
+        <li><a href="#equipe" class="nav-link text-sm text-white/80 transition hover:text-bronze" data-section="equipe">Equipe</a></li>
+        <li><a href="#contato" class="nav-link text-sm text-white/80 transition hover:text-bronze" data-section="contato">Contato</a></li>
+        <li>
+          <a href="#contato" class="inline-block rounded-sm bg-bronze px-5 py-2.5 text-sm font-medium text-navy transition hover:bg-[#c29e66]">
+            Fale conosco
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button id="menu-toggle" type="button"
+              class="inline-flex items-center justify-center rounded p-2 text-white md:hidden"
+              aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+        <svg id="icon-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/>
+        </svg>
+        <svg id="icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" d="M6 18 18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-navy px-5 pb-6 pt-2 md:hidden">
+      <ul class="flex flex-col gap-1">
+        <li><a href="#inicio" class="mobile-link block rounded px-2 py-3 text-white/90 hover:bg-white/5">Início</a></li>
+        <li><a href="#escritorio" class="mobile-link block rounded px-2 py-3 text-white/90 hover:bg-white/5">O Escritório</a></li>
+        <li><a href="#areas" class="mobile-link block rounded px-2 py-3 text-white/90 hover:bg-white/5">Áreas de Atuação</a></li>
+        <li><a href="#equipe" class="mobile-link block rounded px-2 py-3 text-white/90 hover:bg-white/5">Equipe</a></li>
+        <li><a href="#contato" class="mobile-link block rounded px-2 py-3 text-white/90 hover:bg-white/5">Contato</a></li>
+        <li class="pt-3">
+          <a href="#contato" class="mobile-link block rounded-sm bg-bronze px-5 py-3 text-center font-medium text-navy">Fale conosco</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="inicio" class="relative flex min-h-screen items-center bg-navy">
+      <!-- Linhas decorativas sutis -->
+      <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div class="absolute -right-24 top-1/2 h-[36rem] w-[36rem] -translate-y-1/2 rounded-full border border-white/5"></div>
+        <div class="absolute -right-24 top-1/2 h-[26rem] w-[26rem] -translate-y-1/2 rounded-full border border-bronze/10"></div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-6xl px-5 py-32 lg:px-8">
+        <p class="mb-6 text-xs font-medium uppercase tracking-[0.3em] text-bronze">Sociedade de Advogados · São Paulo</p>
+        <h1 class="max-w-3xl font-serif text-4xl font-medium leading-tight text-white sm:text-5xl lg:text-6xl">
+          Afonso Silva e Muratori<br>
+          <span class="text-bronze">Advogados</span>
+        </h1>
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
+          Sociedade de advogados com atendimento individualizado e personalizado nas áreas de
+          Direito Tributário, Civil e Empresarial.
+        </p>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a href="#areas" class="inline-block rounded-sm bg-bronze px-8 py-4 text-center text-sm font-medium text-navy transition hover:bg-[#c29e66]">
+            Áreas de Atuação
+          </a>
+          <a href="#contato" class="inline-block rounded-sm border border-white/30 px-8 py-4 text-center text-sm font-medium text-white transition hover:border-bronze hover:text-bronze">
+            Fale conosco
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         O ESCRITÓRIO (SOBRE)
+         ============================================================ -->
+    <section id="escritorio" class="bg-cream py-24 lg:py-32">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="reveal">
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-bronze-dark">O Escritório</p>
+          <h2 class="max-w-3xl font-serif text-3xl font-medium leading-snug text-navy sm:text-4xl">
+            Direito Tributário, Civil e Empresarial — para empresas e pessoas físicas
+          </h2>
+        </div>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-5 lg:gap-16">
+          <div class="reveal space-y-6 text-base leading-relaxed text-ink/80 lg:col-span-3">
+            <!-- Texto institucional — edite aqui se precisar atualizar -->
+            <p>
+              O Afonso Silva e Muratori é uma sociedade de advogados que oferece atendimento
+              individualizado e personalizado em suas áreas de concentração do Direito Tributário,
+              Civil e Empresarial.
+            </p>
+            <p>
+              A principal premissa do escritório é desenvolver uma advocacia de negócios que não se
+              restringe à administração de passivos judiciais, mas que busca mapear, identificar e
+              desenvolver medidas preventivas, auxiliando na adequação de todo e qualquer projeto
+              empresarial.
+            </p>
+            <p>
+              Para isso, contamos com uma equipe de profissionais qualificados, cujo objetivo é
+              prestar consultoria personalizada para evitar a formação de passivo ou obter
+              resultados eficazes em ações que demandam atuação preventiva.
+            </p>
+          </div>
+
+          <!-- Destaque: conceito de escritório-boutique -->
+          <aside class="reveal lg:col-span-2">
+            <div class="border-l-2 border-bronze bg-white p-8 shadow-sm lg:p-10">
+              <p class="font-serif text-xl italic leading-relaxed text-navy">
+                “Nosso conceito é o de um escritório-boutique, com foco em assessoria preventiva
+                nas áreas estratégicas do Direito.”
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         DIFERENCIAL — ADVOCACIA PREVENTIVA
+         ============================================================ -->
+    <section class="bg-navy py-24 lg:py-28" aria-labelledby="diferencial-titulo">
+      <div class="mx-auto max-w-4xl px-5 text-center lg:px-8">
+        <div class="reveal">
+          <div class="mx-auto mb-8 h-px w-16 bg-bronze" aria-hidden="true"></div>
+          <h2 id="diferencial-titulo" class="font-serif text-3xl font-medium text-white sm:text-4xl">
+            Advocacia preventiva de negócios
+          </h2>
+          <p class="mt-8 text-base leading-relaxed text-white/70 sm:text-lg">
+            No Afonso Silva e Muratori, o foco é desenvolver uma advocacia de negócios que não se
+            restringe à administração de passivos judiciais. Ao contrário, buscamos mapear,
+            identificar e desenvolver medidas preventivas, auxiliando na adequação de todo e
+            qualquer projeto empresarial. Com vasta experiência nos setores industrial, comercial e
+            de serviços, atuamos sob o conceito de escritório-boutique, inseridos nas atividades dos
+            nossos clientes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ÁREAS DE ATUAÇÃO (abas + accordion)
+         ============================================================ -->
+    <section id="areas" class="bg-cream py-24 lg:py-32">
+      <div class="mx-auto max-w-4xl px-5 lg:px-8">
+        <div class="reveal text-center">
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-bronze-dark">Áreas de Atuação</p>
+          <h2 class="font-serif text-3xl font-medium text-navy sm:text-4xl">Como podemos ajudar</h2>
+        </div>
+
+        <!-- Abas -->
+        <div class="reveal mt-12" role="tablist" aria-label="Áreas de atuação">
+          <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <button id="tab-tributario" type="button" role="tab" aria-selected="true" aria-controls="panel-tributario"
+                    class="area-tab rounded-sm border border-navy bg-navy px-6 py-4 font-serif text-lg text-white transition">
+              Direito Tributário
+            </button>
+            <button id="tab-civil" type="button" role="tab" aria-selected="false" aria-controls="panel-civil" tabindex="-1"
+                    class="area-tab rounded-sm border border-navy/20 bg-transparent px-6 py-4 font-serif text-lg text-navy transition hover:border-navy/50">
+              Direito Civil e Empresarial
+            </button>
+          </div>
+
+          <!-- Painel: Direito Tributário -->
+          <div id="panel-tributario" role="tabpanel" aria-labelledby="tab-tributario" tabindex="0" class="mt-8">
+            <p class="mb-6 text-sm uppercase tracking-widest text-bronze-dark">Assessoria especializada em questões tributárias</p>
+            <div class="divide-y divide-navy/10 border-y border-navy/10">
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Elaboração de planejamento fiscal</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Normas de conduta e tomada de decisões voltadas à anulação, redução, compensação
+                    ou adiamento do ônus tributário correspondente às obrigações e transações do cliente.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Formulação de pareceres</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Elaboração e redação de pareceres sobre o impacto gerado pelas normas tributárias
+                    nos negócios do cliente.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Recuperação de créditos tributários</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Medidas administrativas ou judiciais voltadas à compensação ou ressarcimento de
+                    tributos recolhidos indevidamente ou pagos a maior.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Contato com autoridades fazendárias</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Reivindicação de prerrogativas e vantagens fiscais para o cliente.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Defesas e recursos administrativos</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Impugnação da exigência do crédito tributário e interposição de recursos no órgão
+                    administrativo, acompanhando até a decisão final.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Acompanhamento e defesas em execuções fiscais</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Do monitoramento de novas execuções à adoção de medidas judiciais cabíveis,
+                    visando a diminuição ou extinção da exigência fiscal.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Propositura de ação judicial</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Anulação ou declaração de inexistência do crédito tributário.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Painel: Direito Civil e Empresarial -->
+          <div id="panel-civil" role="tabpanel" aria-labelledby="tab-civil" tabindex="0" class="mt-8 hidden">
+            <p class="mb-6 text-sm uppercase tracking-widest text-bronze-dark">Assessoria jurídica especializada para empresas</p>
+            <div class="divide-y divide-navy/10 border-y border-navy/10">
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Elaboração de planejamento societário</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Medidas voltadas ao desenvolvimento das atividades empresariais e à proteção patrimonial.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Negociações empresariais</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Atuação junto a estabelecimentos bancários e fornecedores para a solução de conflitos.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Direito contratual</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Análise, negociação e elaboração de contratos nacionais e internacionais.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Direito societário</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Fusões, cisões, incorporações e aquisições de empresas, formação de consórcios e joint ventures.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Direito imobiliário</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Análise e elaboração de contratos; análise do imóvel, vendedores e compradores,
+                    visando a aquisição firme da propriedade e evitando nulidades por dívidas judiciais
+                    ou administrativas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3>
+                  <button type="button" class="accordion-trigger flex w-full items-center justify-between gap-4 py-5 text-left font-medium text-navy" aria-expanded="false">
+                    <span>Contencioso comercial e civil</span>
+                    <svg class="accordion-icon h-5 w-5 shrink-0 text-bronze-dark transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+                  </button>
+                </h3>
+                <div class="accordion-panel">
+                  <p class="pb-6 pr-8 text-sm leading-relaxed text-ink/70">
+                    Propositura de ações, defesa e interposição de recursos até a decisão final,
+                    inclusive nos Tribunais Superiores (STJ e STF).
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EQUIPE
+         ============================================================ -->
+    <section id="equipe" class="bg-white py-24 lg:py-32">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="reveal text-center">
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-bronze-dark">Equipe</p>
+          <h2 class="font-serif text-3xl font-medium text-navy sm:text-4xl">Nossos sócios</h2>
+        </div>
+
+        <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Paulo Afonso Silva -->
+          <article class="reveal text-center">
+            <!-- TODO: substituir foto — placeholder com iniciais -->
+            <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-navy" aria-hidden="true">
+              <span class="font-serif text-3xl text-bronze">PA</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-medium text-navy">Paulo Afonso Silva</h3>
+            <p class="mt-1 text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Sócio</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/70">
+              Advogado graduado pela Faculdade de Taubaté (1970). Especialização em Direito
+              Empresarial pela PUC/SP (1973). Foi Secretário Municipal de Negócios Jurídicos de
+              Diadema e Presidente da OAB — Subsecção de Diadema.
+              <!-- TODO: substituir — bio incompleta, confirmar o restante com o escritório -->
+            </p>
+            <a href="mailto:paulo@afsm.adv.br" class="mt-4 inline-block text-sm text-bronze-dark underline decoration-bronze/40 underline-offset-4 hover:decoration-bronze">
+              paulo@afsm.adv.br
+            </a>
+          </article>
+
+          <!-- Luís Fernando Muratori -->
+          <article class="reveal text-center">
+            <!-- TODO: substituir foto — placeholder com iniciais -->
+            <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-navy" aria-hidden="true">
+              <span class="font-serif text-3xl text-bronze">LM</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-medium text-navy">Luís Fernando Muratori</h3>
+            <p class="mt-1 text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Sócio</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/70">
+              Advogado graduado pela Universidade Mackenzie (1997). Especialização em Direito
+              Tributário pela PUC/SP (1999).
+            </p>
+            <div class="mt-4 flex flex-col items-center gap-2">
+              <a href="mailto:muratori@afsm.adv.br" class="text-sm text-bronze-dark underline decoration-bronze/40 underline-offset-4 hover:decoration-bronze">
+                muratori@afsm.adv.br
+              </a>
+              <a href="https://www.linkedin.com/in/luis-fernando-muratori-48baa02b/" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 text-sm text-navy/70 hover:text-navy"
+                 aria-label="Perfil de Luís Fernando Muratori no LinkedIn (abre em nova aba)">
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+          </article>
+
+          <!-- Eliane Bitu -->
+          <article class="reveal text-center">
+            <!-- TODO: substituir foto — placeholder com iniciais -->
+            <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-navy" aria-hidden="true">
+              <span class="font-serif text-3xl text-bronze">EB</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-medium text-navy">Eliane Bitu</h3>
+            <p class="mt-1 text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Sócia</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/70">
+              Advogada graduada pela Faculdade de Direito de São Bernardo do Campo. Especialização
+              em Direito Civil/Processo Civil pela EPD — Escola Paulista de Direito (2010) e em
+              Direito Tributário pela PUC/SP (2015).
+            </p>
+            <a href="mailto:eliane@afsm.adv.br" class="mt-4 inline-block text-sm text-bronze-dark underline decoration-bronze/40 underline-offset-4 hover:decoration-bronze">
+              eliane@afsm.adv.br
+            </a>
+          </article>
+
+          <!-- Daniela Lima dos Santos Souza -->
+          <article class="reveal text-center">
+            <!-- TODO: substituir foto — placeholder com iniciais -->
+            <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-navy" aria-hidden="true">
+              <span class="font-serif text-3xl text-bronze">DS</span>
+            </div>
+            <h3 class="mt-6 font-serif text-xl font-medium text-navy">Daniela Lima dos Santos Souza</h3>
+            <p class="mt-1 text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Sócia</p>
+            <p class="mt-4 text-sm leading-relaxed text-ink/70">
+              Advogada graduada pela Faculdade de Diadema — FAD (2012).
+            </p>
+            <!-- TODO: substituir — confirmar o e-mail da Daniela (o site antigo repetia
+                 muratori@afsm.adv.br como placeholder). Quando confirmado, descomente e ajuste:
+            <a href="mailto:EMAIL_AQUI" class="mt-4 inline-block text-sm text-bronze-dark underline decoration-bronze/40 underline-offset-4 hover:decoration-bronze">
+              EMAIL_AQUI
+            </a>
+            -->
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTATO
+         ============================================================ -->
+    <section id="contato" class="bg-cream py-24 lg:py-32">
+      <div class="mx-auto max-w-6xl px-5 lg:px-8">
+        <div class="reveal text-center">
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-bronze-dark">Contato</p>
+          <h2 class="font-serif text-3xl font-medium text-navy sm:text-4xl">Fale conosco</h2>
+          <p class="mx-auto mt-4 max-w-xl text-base text-ink/70">
+            Envie sua mensagem ou entre em contato pelos canais abaixo. Retornaremos o mais breve possível.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-12 lg:grid-cols-2">
+
+          <!-- Formulário (Web3Forms) -->
+          <div class="reveal">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST"
+                  class="space-y-5 bg-white p-8 shadow-sm lg:p-10" aria-label="Formulário de contato" novalidate>
+
+              <!-- ======================================================
+                   CHAVE DO FORMULÁRIO (obrigatória para funcionar!)
+                   Crie uma access key gratuita em https://web3forms.com
+                   informando o e-mail que receberá as mensagens, e
+                   substitua SEU_ACCESS_KEY_AQUI abaixo pela chave gerada.
+                   ====================================================== -->
+              <input type="hidden" name="access_key" value="SEU_ACCESS_KEY_AQUI">
+              <input type="hidden" name="subject" value="Novo contato pelo site — AFSM Advogados">
+              <input type="hidden" name="from_name" value="Site AFSM Advogados">
+              <!-- Campo anti-spam (honeypot) — não remover -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div>
+                <label for="nome" class="mb-1.5 block text-sm font-medium text-navy">Nome <span class="text-bronze-dark" aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" required autocomplete="name"
+                       class="w-full rounded-sm border border-navy/20 bg-cream/50 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:border-bronze focus:outline-none"
+                       placeholder="Seu nome completo">
+              </div>
+
+              <div>
+                <label for="email" class="mb-1.5 block text-sm font-medium text-navy">E-mail <span class="text-bronze-dark" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                       class="w-full rounded-sm border border-navy/20 bg-cream/50 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:border-bronze focus:outline-none"
+                       placeholder="seuemail@exemplo.com.br">
+              </div>
+
+              <div>
+                <label for="telefone" class="mb-1.5 block text-sm font-medium text-navy">Telefone / Celular</label>
+                <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                       class="w-full rounded-sm border border-navy/20 bg-cream/50 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:border-bronze focus:outline-none"
+                       placeholder="(11) 90000-0000">
+              </div>
+
+              <div>
+                <label for="mensagem" class="mb-1.5 block text-sm font-medium text-navy">Mensagem <span class="text-bronze-dark" aria-hidden="true">*</span></label>
+                <textarea id="mensagem" name="mensagem" rows="5" required
+                          class="w-full rounded-sm border border-navy/20 bg-cream/50 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:border-bronze focus:outline-none"
+                          placeholder="Descreva brevemente como podemos ajudar"></textarea>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="consentimento" name="consentimento_lgpd" value="Sim" required
+                       class="mt-1 h-4 w-4 shrink-0 rounded-sm border-navy/30 accent-[#B08D57]">
+                <label for="consentimento" class="text-xs leading-relaxed text-ink/70">
+                  Autorizo o tratamento dos meus dados pessoais informados neste formulário para fins
+                  de contato, nos termos da Lei Geral de Proteção de Dados — LGPD (Lei nº 13.709/2018). <span class="text-bronze-dark" aria-hidden="true">*</span>
+                </label>
+              </div>
+
+              <button type="submit"
+                      class="w-full rounded-sm bg-navy px-8 py-4 text-sm font-medium text-white transition hover:bg-[#16293d] disabled:cursor-not-allowed disabled:opacity-60">
+                Enviar mensagem
+              </button>
+
+              <!-- Mensagens de status do envio (preenchidas via JavaScript) -->
+              <p id="form-status" class="hidden text-sm" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Informações de contato -->
+          <div class="reveal space-y-8">
+            <!-- Dados de contato — edite telefone, e-mail e endereço aqui -->
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Endereço</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink/80">
+                  Avenida Presidente Juscelino Kubitschek, 1455, 4º andar<br>
+                  Itaim Bibi, São Paulo/SP — CEP 04543-011
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Telefone</h3>
+                <a href="tel:+551121243763" class="mt-2 inline-block text-sm text-ink/80 hover:text-navy">(11) 2124-3763</a>
+              </div>
+              <div>
+                <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">E-mail</h3>
+                <a href="mailto:muratori@afsm.adv.br" class="mt-2 inline-block text-sm text-ink/80 hover:text-navy">muratori@afsm.adv.br</a>
+              </div>
+              <div>
+                <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">Horário de atendimento</h3>
+                <!-- TODO: substituir — confirmar horário de atendimento com o escritório -->
+                <p class="mt-2 text-sm text-ink/80">Segunda a sexta, das 9h às 18h</p>
+              </div>
+              <div>
+                <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze-dark">LinkedIn</h3>
+                <a href="https://www.linkedin.com/company/afonso-silva-e-muratori-advogados-associados/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="mt-2 inline-flex items-center gap-1.5 text-sm text-ink/80 hover:text-navy"
+                   aria-label="Página da AFSM no LinkedIn (abre em nova aba)">
+                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                  Afonso Silva e Muratori Advogados
+                </a>
+              </div>
+            </div>
+
+            <!-- Mapa (Google Maps) -->
+            <div class="overflow-hidden rounded-sm border border-navy/10 shadow-sm">
+              <iframe
+                src="https://www.google.com/maps?q=Avenida+Presidente+Juscelino+Kubitschek,+1455,+Itaim+Bibi,+S%C3%A3o+Paulo,+SP,+04543-011&output=embed"
+                width="100%" height="300" style="border:0" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                title="Mapa com a localização do escritório Afonso Silva e Muratori Advogados">
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="bg-navy text-white/70">
+    <div class="mx-auto max-w-6xl px-5 py-16 lg:px-8">
+      <div class="grid gap-12 md:grid-cols-3">
+
+        <div>
+          <img src="assets/logo-afsm.svg" alt="Afonso Silva e Muratori Advogados" class="h-10 w-auto" loading="lazy">
+          <p class="mt-5 max-w-xs text-sm leading-relaxed">
+            Sociedade de advogados com atendimento individualizado e personalizado nas áreas de
+            Direito Tributário, Civil e Empresarial.
+          </p>
+        </div>
+
+        <nav aria-label="Links rápidos">
+          <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze">Navegação</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="#inicio" class="transition hover:text-white">Início</a></li>
+            <li><a href="#escritorio" class="transition hover:text-white">O Escritório</a></li>
+            <li><a href="#areas" class="transition hover:text-white">Áreas de Atuação</a></li>
+            <li><a href="#equipe" class="transition hover:text-white">Equipe</a></li>
+            <li><a href="#contato" class="transition hover:text-white">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="text-xs font-medium uppercase tracking-[0.2em] text-bronze">Contato</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li>
+              Av. Pres. Juscelino Kubitschek, 1455, 4º andar<br>
+              Itaim Bibi, São Paulo/SP — CEP 04543-011
+            </li>
+            <li><a href="tel:+551121243763" class="transition hover:text-white">(11) 2124-3763</a></li>
+            <li><a href="mailto:muratori@afsm.adv.br" class="transition hover:text-white">muratori@afsm.adv.br</a></li>
+            <li>
+              <a href="https://www.linkedin.com/company/afonso-silva-e-muratori-advogados-associados/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 transition hover:text-white"
+                 aria-label="Página da AFSM no LinkedIn (abre em nova aba)">
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="mt-14 border-t border-white/10 pt-8 text-center text-xs text-white/50">
+        <p>© <span id="ano-atual">2026</span> Afonso Silva e Muratori Advogados. Todos os direitos reservados.</p>
+        <!-- TODO: substituir — confirmar o nº de registro da sociedade na OAB/SP e descomentar a linha abaixo:
+        <p class="mt-2">Sociedade de advogados registrada na OAB/SP sob o nº XXXXX.</p>
+        -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp: omitido porque não há número de WhatsApp confirmado.
+       TODO: se o escritório tiver WhatsApp, adicione antes do </body>:
+  <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition hover:scale-105"
+     aria-label="Conversar pelo WhatsApp (abre em nova aba)">
+    <svg class="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.82 9.82 0 0 1-1.51-5.26c0-5.44 4.43-9.87 9.89-9.87a9.82 9.82 0 0 1 6.99 2.9 9.82 9.82 0 0 1 2.89 6.99c0 5.44-4.44 9.86-9.88 9.86zm8.41-18.27A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.87 11.87 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.48-8.4z"/></svg>
+  </a>
+  -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
